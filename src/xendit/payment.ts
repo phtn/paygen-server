@@ -1,15 +1,10 @@
 import { AxiosInstance, AxiosRequestConfig } from 'axios'
-import {
-	CreateCheckoutResource,
-	PaymentResponse,
-	PaymentValues,
-	url,
-} from '@resource/payment'
-import { shapePayment as transform } from '@transformers'
 import { createAxiosInstance, paymentConfig as config } from './axios'
-import { error } from '@fire/error'
-import { update } from '@fire/update'
+import { CreateCheckoutResource, PaymentResponse, url } from '@resource/payment'
+import { shapePayment as transform } from '@transformers'
 import { AccountParams } from '@resource/account'
+import { update } from '@fire/update'
+import { error } from '@fire/error'
 
 const onCreatePaymentLink = async (
 	values: CreateCheckoutResource,

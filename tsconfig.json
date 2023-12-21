@@ -34,6 +34,7 @@
 			"@lib/*": ["./lib/*"],
 			"@procedures/*": ["./procedures/*"],
 			"@resource/*": ["./resource/*"],
+			"@routers/*": ["./routers/*"],
 			"@transformers": ["./transformers/index.ts"],
 			"@trpc": ["./trpc/index.ts"],
 			"@utils": ["./utils/index.ts"]

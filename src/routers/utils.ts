@@ -15,6 +15,6 @@ export const isExistingCustomer = async (values: typeof AccountParams) => {
 		return response.data
 	} else {
 		const response = await createAccount(values)
-		return response
+		return response.data
 	}
 }

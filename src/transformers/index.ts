@@ -3,13 +3,7 @@ import {
 	createReferenceNumber,
 	formatMobile,
 } from '@utils'
-import {
-	AccountParams,
-	CreateAccountResource,
-	Individual,
-	PaymentShape,
-} from '@resource/account'
-import { t } from 'elysia'
+import { AccountParams, CreateAccountResource } from '@resource/account'
 
 export const shapePayment = (values: typeof AccountParams) => {
 	const {

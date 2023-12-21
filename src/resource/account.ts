@@ -5,7 +5,7 @@ export const AccountParams = t.Object({
 	amount: t.String({ minLength: 3 }),
 	assured_name: t.String({ minLength: 3, maxLength: 25 }),
 	email: t.String({ format: 'email' }),
-	fee_amount: t.String({ minLength: 3 }),
+	fee_amount: t.String(),
 	fee_type: t.String(),
 	given_names: t.String({ maxLength: 35 }),
 	iso_number: t.String({ maxLength: 8, minLength: 8 }),

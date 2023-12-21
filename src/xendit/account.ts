@@ -1,10 +1,10 @@
 import { AxiosInstance, AxiosRequestConfig } from 'axios'
 import { AccountParams, CreateAccountResource, url } from '@resource/account'
 import { createAxiosInstance, accountConfig as config } from './axios'
-import { shapeAccount } from '@transformers'
-import { error } from '@fire/error'
-import { createPaymentLink } from './payment'
 import { createFirebaseAccount } from '@fire/create'
+import { shapeAccount } from '@transformers'
+import { createPaymentLink } from './payment'
+import { error } from '@fire/error'
 
 export const onCreateAccount = async (
 	body: CreateAccountResource,
