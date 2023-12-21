@@ -6,9 +6,17 @@
     "dev": "bun run --watch src/index.ts"
   },
   "dependencies": {
-    "elysia": "latest"
+    "@elysiajs/cors": "^0.7.2",
+    "@elysiajs/trpc": "^0.7.0",
+    "@elysiajs/websocket": "^0.2.8",
+    "@trpc/server": "^10.44.1",
+    "axios": "^1.6.2",
+    "elysia": "latest",
+    "firebase": "^10.7.1",
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
+    "@types/uuid": "^9.0.7",
     "bun-types": "latest"
   },
   "module": "src/index.js"
