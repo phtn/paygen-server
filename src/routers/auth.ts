@@ -1,15 +1,11 @@
-import { signInWithGoogle, signOut } from '@fire/auth'
-import { procedure, router } from '@trpc'
+import {signInWithGoogle, signOut} from '@fire/auth'
+import {procedure, router} from '@trpc'
 
 export const authRouter = router({
-	signInWithGoogle: procedure.query(() => {
-		const response = signInWithGoogle()
-		return response
-	}),
-	signOut: procedure.query(() => {
-		const response = signOut()
-		return response
-	}),
+    signInWithGoogle: procedure.query(() => {
+        signInWithGoogle()
+    }),
+    signOut: procedure.query(() => {
+        signOut().then(res => res)
+    }),
 })
-
-export type AuthRouter = typeof authRouter

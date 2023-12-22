@@ -11,12 +11,10 @@ const provider = new GoogleAuthProvider()
 
 export const signInWithGoogle = () => {
 	const Err = (err: FirebaseError) => {
-		error(err.message)
-		const credential = GoogleAuthProvider.credentialFromError(err)
-		return credential
+		error(err.message).then(res => res)
 	}
 
-	const Ok = (result: any) => {
+const Ok = (result: any) => {
 		const credential = GoogleAuthProvider.credentialFromResult(result)
 		const token = credential?.accessToken
 		const user = result.user
@@ -28,7 +26,7 @@ export const signInWithGoogle = () => {
 
 export const signOut = () => {
 	const Err = (err: FirebaseError) => {
-		error(err.message)
+		error(err.message).then(res => res)
 	}
 	const Ok = (result: any) => {
 		console.log(result)

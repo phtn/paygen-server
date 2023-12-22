@@ -1,7 +1,7 @@
 import { collection, query, where, getDocs } from 'firebase/firestore'
-import { db } from '@lib/db'
-import { formatMobile } from '@utils'
 import { AccountResponseResource } from '@resource/account'
+import { formatMobile } from '@utils'
+import { db } from '@lib/db'
 
 export const CustomerChecker = async (
 	collectionPath: string,

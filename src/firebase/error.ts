@@ -6,7 +6,7 @@ export const error = async (error: unknown) => {
 		throw new Error(error.message)
 	}
 	const Ok = (value: any) => {
-		return value
+		console.log(value)
 	}
 
 	if (typeof error !== 'object') {
@@ -14,10 +14,9 @@ export const error = async (error: unknown) => {
 	}
 
 	if (error) {
-		const docRef = await addDoc(collection(db, 'errors'), {
+		return await addDoc(collection(db, 'errors'), {
 			...error,
 			created_at: new Date().getTime(),
 		}).then(Ok, Err)
-		console.log('Error written with ID: ', docRef.id)
 	}
 }

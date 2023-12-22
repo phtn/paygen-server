@@ -2,16 +2,17 @@ import { collection, setDoc, doc } from 'firebase/firestore'
 import { db } from '@lib/db'
 import { error } from './error'
 import { CreateAccountResource } from '@resource/account'
+import {FirebaseError} from "@firebase/app";
 
 export const createFirebaseAccount = async (
 	customer: CreateAccountResource,
 	id: string
 ) => {
-	const Err = (err: Error) => {
+	const Err = (err: FirebaseError) => {
 		error(err)
 	}
-	const Ok = (value: any) => {
-		return value
+	const Ok = (response: any) => {
+		return response
 	}
 
 	if (typeof customer !== 'object') {
