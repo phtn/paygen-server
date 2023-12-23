@@ -4,18 +4,18 @@ import {db} from "@lib/db"
 import {collection, getDocs, query, where} from 'firebase/firestore'
 
 const CustomerChecker = async (
-    collectionPath: string,
-    mobile_number: string
+  collectionPath: string,
+  mobile_number: string
 ) => {
-    if (mobile_number) {
-        const q = query(collection(db, collectionPath), where('mobile_number', '==', formatMobile((mobile_number))))
+  if (mobile_number) {
+    const q = query(collection(db, collectionPath), where('mobile_number', '==', formatMobile((mobile_number))))
 
-        const qSnap = await getDocs(q)
+    const qSnap = await getDocs(q)
 
-        return qSnap.docs.map(doc => doc.data())
+    return qSnap.docs.map(doc => doc.data())
 
-    }
-    return null
+  }
+  return null
 }
 
 

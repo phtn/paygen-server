@@ -4,7 +4,7 @@ import {AccountParams} from '@resource/account'
 import {isExistingCustomer} from './utils'
 
 export const accountRouter = router({
-    create: Create.query(async ({input}) => {
-        await isExistingCustomer(input as typeof AccountParams)
-    }),
+  create: Create.query(async ({input}) => {
+    return await isExistingCustomer(input as typeof AccountParams)
+  }),
 })
