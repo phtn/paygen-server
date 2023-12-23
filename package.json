@@ -7,13 +7,16 @@
   },
   "dependencies": {
     "@elysiajs/cors": "^0.7.2",
+    "@elysiajs/swagger": "^0.8.0",
     "@elysiajs/trpc": "^0.7.0",
     "@elysiajs/websocket": "^0.2.8",
     "@trpc/server": "^10.44.1",
+    "@types/nodemailer": "^6.4.14",
     "axios": "^1.6.2",
     "elysia": "latest",
     "firebase": "^10.7.1",
     "firebase-admin": "^12.0.0",
+    "nodemailer": "^6.9.7",
     "uuid": "^9.0.1"
   },
   "devDependencies": {
