@@ -5,7 +5,7 @@ import {mergedRoutes} from '@routers/merge'
 
 const app = new Elysia()
   .use(cors())
-  .get('/', () => 'Elysia + tRPC')
+  .get('/', () => 'PayGen Reliable Payments')
   .use(trpc(mergedRoutes))
   .listen(8080)
 

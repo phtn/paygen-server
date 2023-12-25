@@ -11,7 +11,7 @@ export const isExistingCustomer = async (values: typeof AccountParams) => {
   if (check) {
     const id: string = check[0].id
     const response = await createPaymentLink(values, id)
-    console.log('Registered', response.data)
+    console.log('Registered')
     return response.data
   } else {
     const response = await createAccount(values)

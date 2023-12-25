@@ -1,10 +1,10 @@
 import {router} from '@trpc'
-import {Create} from '@procedures/create'
+import {Create} from '@procedures/payment'
 import {AccountParams} from '@resource/account'
 import {isExistingCustomer} from './utils'
 
 export const accountRouter = router({
-  create: Create.query(async ({input}) => {
+  createLink: Create.query(async ({input}) => {
     return await isExistingCustomer(input as typeof AccountParams)
   }),
 })
