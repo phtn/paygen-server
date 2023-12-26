@@ -22,7 +22,7 @@ const signInWithEmail = async ({email, password}: typeof TEmailAndPassword) => {
 }
 
 const logout = async () => {
-  return await signOut(auth)
+  await signOut(auth)
 }
 
 export {createUser, signInWithEmail, logout, googleSignIn}
