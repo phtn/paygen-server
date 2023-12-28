@@ -8,8 +8,9 @@ export const isExistingCustomer = async (values: typeof AccountParams) => {
 
   const check = await CustomerChecker('customers', mobile_number)
 
-  if (check) {
+  if (check && check[0] !== undefined) {
     const id: string = check[0].id
+
     const response = await createPaymentLink(values, id)
     console.log('Registered', check[0].id)
     return response.data
